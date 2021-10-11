@@ -1,8 +1,8 @@
 #pragma once
-#include "../private/building_lib.hpp"
+#include "../../private/building_lib.hpp"
 #include <string>
 
-class LIB_PUBLIC Saludo {
+class Saludo {
 	const std::string nombre;
 
   public:
