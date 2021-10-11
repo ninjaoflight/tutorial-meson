@@ -33,9 +33,6 @@ catch2_dep = dependency(
 
 
 subdir('lib-saludo')
-inc = include_directories('include')
-
-
 subdir('test')
 
 pkg_mod = import('pkgconfig')

@@ -1,6 +1,6 @@
 #include <catch2/catch.hpp>
 #include <iostream>
-#include <saludo.hpp>
+#include <saludo/saludo.hpp>
 
 TEST_CASE("Saludar", "[Saludo]") {
 
