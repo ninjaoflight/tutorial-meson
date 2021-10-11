@@ -30,11 +30,3 @@ jobs:
           action: test
           directory: builddir
           options: --verbose
-      with:
-        architecture: x64
-    - name: Prepare Build
-      run: meson setup build
-    - name: Run Build
-      run: meson compile -v -C build
-    - name: Run Test Suite
-      run: meson test -v -C build
