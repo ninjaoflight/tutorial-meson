@@ -19,9 +19,15 @@ saludo_bin = executable('saludo', bin_sources,
 assets_dir = join_paths(meson.source_root(), 'assets/')
 assets_out = join_paths(meson.build_root(), 'assets/')
 
+cp_cmd = ['cp', '-r', assets_dir, assets_out]
+
+if host_machine.system() == 'windows'
+    cp_cmd = ['powershell', 'cp', '-r', assets_dir, assets_out]
+endif
+
 custom_target(
     'assets',
     output: 'dummy',
-    command : ['cp', '-r', assets_dir, assets_out],
+    command : cp_cmd,
     install : false,
     build_by_default : true)
