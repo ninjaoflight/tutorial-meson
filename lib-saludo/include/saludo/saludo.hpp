@@ -3,10 +3,10 @@
 #include <string>
 
 class Saludo {
-	const std::string nombre;
+	std::string nombre;
 
   public:
-	Saludo(std::string nombre);
-
+	Saludo(std::string nombre = "Mundo");
+	void setNombre(std::string nombre);
 	std::string saludar();
 };

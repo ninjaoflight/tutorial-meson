@@ -5,8 +5,12 @@
 TEST_CASE("Saludar", "[Saludo]") {
 
 	SECTION("Saludo puede generarse") {
-		Saludo saludo("mundo");
-		std::cout << saludo.saludar() << "\n";
-		REQUIRE(saludo.saludar() == "Hola mundo!");
+		Saludo saludo;
+		REQUIRE(saludo.saludar() == "Hola Mundo!");
+	}
+	SECTION("Saludo puede cambiar su nombre") {
+		Saludo saludo;
+		saludo.setNombre("a todos");
+		REQUIRE(saludo.saludar() == "Hola a todos!");
 	}
 }

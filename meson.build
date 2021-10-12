@@ -30,9 +30,10 @@ catch2_dep = dependency(
 				'catch2',
 				fallback : ['catch2', 'catch2_dep'])
 
-
+gtkmm_dep = dependency('gtkmm-4.0')
 
 subdir('lib-saludo')
+subdir('saludo')
 subdir('test')
 
 pkg_mod = import('pkgconfig')

@@ -2,6 +2,10 @@
 #include <fmt/core.h>
 
 Saludo::Saludo(std::string nombre)
-    : nombre(fmt::format("Hola {}!", nombre)) {}
+    : nombre(nombre) {}
 
-std::string Saludo::saludar() { return nombre; }
+void Saludo::setNombre(std::string nombre){
+    this->nombre = nombre;
+}
+
+std::string Saludo::saludar() { return fmt::format("Hola {}!", nombre); }
